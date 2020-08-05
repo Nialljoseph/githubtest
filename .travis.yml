@@ -1,6 +1,6 @@
-language: python #node_js
-python: #node_js:
-  - 2.7.3
+language: node_js
+python: node_js:
+  - 11.6.0
 cache: yarn #npm
 
 install:
