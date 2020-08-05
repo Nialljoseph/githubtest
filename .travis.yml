@@ -1,0 +1,28 @@
+language: python #node_js
+python: #node_js:
+  - 2.7.3
+cache: yarn #npm
+
+install:
+  - yarn ci #npm
+
+script:
+  - yarn test #npm
+  - yarn run build
+
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN
+  on:
+    branch: gh-pages
+#before_install:
+#install:
+#before_script:
+#script:
+#after_success:
+#after_failure:
+#after_script:
+#before_deploy:
+#deploy:
+#after_deploy:
