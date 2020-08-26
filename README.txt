@@ -1,0 +1,6 @@
+- **How to enable the checks in github**
+  -
+- **How to run the script**
+  - You will need to install pylint using "pip install pylint". After that you must run the scripts with python, inputing the name of the file and in return you will be shown the related output from pylint.
+- **System architecture**
+  -
