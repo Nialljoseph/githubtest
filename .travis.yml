@@ -1,14 +1,16 @@
-language: node_js
-python: node_js:
-  - 11.6.0
-cache: yarn #npm
+language: python
+python:
+  - "2.7"
+  - "3.7"
+  - "3.8"
 
 install:
-  - yarn ci #npm
+  - pip install -r "requirements.txt"
 
 script:
-  - yarn test #npm
-  - yarn run build
+  - pylint-check --pylint
+  - pylint-code-rating-check --pylint
+  - pylint-docstring-check --pylint
 
 deploy:
   provider: pages
